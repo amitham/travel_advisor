@@ -1,27 +1,26 @@
-import React from 'react';
-import useStyles from './styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Rating from '@material-ui/lab/Rating';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import useStyles from "./styles";
+import clsx from "clsx";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import Collapse from "@material-ui/core/Collapse";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShareIcon from "@material-ui/icons/Share";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import Rating from "@material-ui/lab/Rating";
+import Box from "@material-ui/core/Box";
 
-
-const RecipeReviewCard=()=> {
+const RecipeReviewCard = () => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -43,7 +42,7 @@ const RecipeReviewCard=()=> {
         <InputLabel id="demo-controlled-open-select-label">Type</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"  
+          id="demo-controlled-open-select"
         >
           <MenuItem value={10}>Restaurants</MenuItem>
           <MenuItem value={20}>Hotels</MenuItem>
@@ -56,10 +55,9 @@ const RecipeReviewCard=()=> {
           labelId="demo-mutiple-checkbox-label"
           id="demo-mutiple-checkbox"
         >
-           <MenuItem value={21}>3.0</MenuItem>
-           <MenuItem value={22}>Above 4.0</MenuItem>
-           <MenuItem value={23}>5.0</MenuItem>
-  
+          <MenuItem value={21}>3.0</MenuItem>
+          <MenuItem value={22}>Above 4.0</MenuItem>
+          <MenuItem value={23}>5.0</MenuItem>
         </Select>
       </FormControl>
       <CardMedia
@@ -68,21 +66,17 @@ const RecipeReviewCard=()=> {
         title="Contemplative Reptile"
       />
       <CardContent>
-        <Typography  >
-          375 Chicken 'n Fries
-        </Typography>
-        <Box component="fieldset" mb={3} borderColor="transparent" className={classes.rating}>
-        <Rating
-          name="simple-controlled"
-          value={2}
-        />
-      </Box>
-      <Typography paragraph>
-           Price:
-          </Typography>
-          <Typography paragraph>
-           Rating:
-          </Typography>
+        <Typography>375 Chicken 'n Fries</Typography>
+        <Box
+          component="fieldset"
+          mb={3}
+          borderColor="transparent"
+          className={classes.rating}
+        >
+          <Rating name="simple-controlled" value={2} />
+        </Box>
+        <Typography paragraph>Price:</Typography>
+        <Typography paragraph>Rating:</Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
@@ -104,13 +98,17 @@ const RecipeReviewCard=()=> {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>
-          More Details...
-          </Typography>
+          <Typography paragraph>More Details...</Typography>
         </CardContent>
       </Collapse>
+
+      <CardMedia
+        className={classes.media}
+        image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+        title="Contemplative Reptile"
+      />
     </Card>
   );
-}
+};
 
 export default RecipeReviewCard;
